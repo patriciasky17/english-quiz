@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/login',[LoginController::class, 'index'])->name('login.index');
-Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
+Route::post('/login', [LoginController::class, 'register'])->name('login.register');
+
 
 Route::get('/quiz', [LoginController::class, 'quiz'])->name('login.quiz');

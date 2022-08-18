@@ -14,7 +14,8 @@ class LoginController extends Controller
             'title' => 'Login - English Quiz'
         ]);
     }
-    public function authenticate(Request $request)
+
+    public function register(Request $request)
     {
         $validatedData = $request->validate([
             'email' => 'required|email:dns',
@@ -26,11 +27,14 @@ class LoginController extends Controller
             'password' => $validatedData['password']
         ];
 
+        // dd($users);
+
         User::create($users);
 
-        return view('index',[
-            'title' => 'English Quiz'
-        ]);
+        return redirect()->intended(route('login.quiz'));
+        // return view('index',[
+        //     'title' => 'English Quiz'
+        // ]);
     }
 
     public function quiz(){
