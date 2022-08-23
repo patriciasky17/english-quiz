@@ -117,7 +117,7 @@
         correctAnswer: "a"
       },
       {
-        question: "Ruby loves blueberry pie _________ it is made with freshly picked blueberries",
+        question: "2. Ruby loves blueberry pie _________ it is made with freshly picked blueberries",
         answers: {
           a: "when",
           b: "because",
@@ -127,7 +127,7 @@
         correctAnswer: "a"
       },
       {
-        question: "I ________ the speech you gave last Tuesday night, but I was in bed with the flu",
+        question: "3. I ________ the speech you gave last Tuesday night, but I was in bed with the flu",
         answers: {
           a: "will have heard",
           b: "would hear",
@@ -137,7 +137,7 @@
         correctAnswer: "c"
       },
       {
-        question: "___________ he waited for the doctor to call him in, David sat in the waiting room and read the newspaper.",
+        question: "4. ___________ he waited for the doctor to call him in, David sat in the waiting room and read the newspaper.",
         answers: {
           a: "even if",
           b: "beside when",
@@ -147,7 +147,7 @@
         correctAnswer: "c"
       },
       {
-        question: "The ticket said the show would start at 8:00, but the curtains didn't go up _________ 8:30.",
+        question: "5. The ticket said the show would start at 8:00, but the curtains didn't go up _________ 8:30.",
         answers: {
           a: "less than",
           b: "about",
