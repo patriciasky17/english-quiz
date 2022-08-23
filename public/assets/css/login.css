@@ -20,6 +20,14 @@
     margin-inline: auto;
     max-inline-size: 20rem;
   }
+
+  img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ margin-bottom: 20px;
+ border-radius: 20px;
+  }
   
   /* helpers/hidden.css */
   
@@ -76,7 +84,7 @@
   }
   
   body {
-    background-color: #381B56;
+    background-color: #fff;
     color: var(--bodyColor);
     font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
     font-size: var(--bodyFontSize);
@@ -89,7 +97,7 @@
   /* modules/anchor.css */
   
   :root {
-    --anchorColor: #eee;
+    --anchorColor: #fff;
   }
   
   a {
@@ -147,12 +155,12 @@
   
   :root {
     --loginBorderRadus: 0.25rem;
-    --loginColor: #eee;
+    --loginColor: #000;
   
-    --loginInputBackgroundColor: #38a;
-    --loginInputHoverBackgroundColor: #434a52;
+    --loginInputBackgroundColor: #fff;
+    --loginInputHoverBackgroundColor: #fff;
   
-    --loginLabelBackgroundColor: #38a;
+    --loginLabelBackgroundColor: #fff;
   
     --loginSubmitBackgroundColor: #E47D1F;
     --loginSubmitColor: #eee;
@@ -161,18 +169,21 @@
   
   .login {
     color: var(--loginColor);
+    
   }
   
   .login label,
   .login input[type="text"],
   .login input[type="password"],
   .login input[type="submit"] {
-    border-radius: var(--loginBorderRadus);
+    border-radius: #000;
+    border: 1px solid;
+    border-radius: 5px;
     padding: 1rem;
   }
   
   .login label {
-    background-color: var(--loginLabelBackgroundColor);
+    background-color: var(--loginSubmitBackgroundColor);
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
     padding-inline: 1.25rem;
@@ -181,8 +192,10 @@
   .login input[type="password"],
   .login input[type="text"] {
     background-color: var(--loginInputBackgroundColor);
+    
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+   
   }
   
   .login input[type="password"]:focus,
