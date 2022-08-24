@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/submit.css">
-    <title>Submit-Quiz</title>
+    <title>{{ $title }}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
@@ -20,10 +20,10 @@
   </div>
   <div class="nav-btn">
     <label for="nav-check">
-      
+
     </label>
   </div>
-  
+
   <div class="nav-links">
   <a href="{{route('login.quiz')}}">Quiz</a>
     <a href="{{route('submit.index')}}">Submit</a>
@@ -38,29 +38,35 @@
 
     <body class="align">
 
-    
+
 
         <div class="grid">
             <img src="./assets/img/AEC.png" alt="logo" width="200" height="200">
 
-            <form action="{{ route('login.register') }}" method="POST" class="form login">
+            <form action="{{ route('submit.store') }}" method="POST" class="form login" enctype="multipart/form-data">
             @csrf
 
-                 <div class="form__field">
-         
-                <input autocomplete="score" id="nama_lengkap" type="text" name="nama" class="form__input"
+                <div class="form__field">
+
+                <input autocomplete="score" id="email" type="text" name="email" class="form__input"
+                        placeholder="Email" required>
+                </div>
+
+                <div class="form__field">
+
+                <input autocomplete="score" id="namalengkap" type="text" name="namalengkap" class="form__input"
                         placeholder="Nama Lengkap" required>
                 </div>
 
                 <div class="form__field">
-         
-                <input autocomplete="score" id="score" type="text" name="score" class="form__input"
+
+                <input autocomplete="score" id="correctquestion" type="text" name="correctquestion" class="form__input"
                         placeholder="Score" required>
                 </div>
 
                 <div class="form__field">
-      
-                    <input id="login__password" type="file" name="password" class="form__input"
+
+                    <input id="screenshot" type="file" name="screenshot" class="form__input"
                         placeholder="Password" required>
                 </div>
 
@@ -68,7 +74,7 @@
                     <input type="submit" value="Submit">
                 </div>
 
-                
+
 
             </form>
 

@@ -19,10 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 
 
 Route::get('/login',[LoginController::class, 'index'])->name('login.index');
@@ -30,6 +26,7 @@ Route::post('/login', [LoginController::class, 'register'])->name('login.registe
 
 
 Route::get('/quiz', [LoginController::class, 'quiz'])->name('login.quiz');
-Route::get('/submit', [SubmitController::class, 'submit'])->name('submit.index');
+Route::get('/submit', [SubmitController::class, 'index'])->name('submit.index');
+Route::post('/submit', [SubmitController::class, 'store'])->name('submit.store');
 
-
+// Route::resource('/submit', SubmitController::class);

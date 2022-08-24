@@ -32,9 +32,6 @@ class LoginController extends Controller
         User::create($users);
 
         return redirect()->intended(route('login.quiz'));
-        // return view('index',[
-        //     'title' => 'English Quiz'
-        // ]);
     }
 
     public function quiz(){
@@ -43,7 +40,7 @@ class LoginController extends Controller
         ]);
     }
 
-    public function submit(){
-        return view('submit');
-    }
+    // public function submit(){
+    //     return view('submit');
+    // }
 }
