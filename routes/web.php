@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\SubmitController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +19,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
+
 Route::get('/login',[LoginController::class, 'index'])->name('login.index');
 Route::post('/login', [LoginController::class, 'register'])->name('login.register');
 
 
 Route::get('/quiz', [LoginController::class, 'quiz'])->name('login.quiz');
+Route::get('/submit', [SubmitController::class, 'submit'])->name('submit.index');
+
+

@@ -42,4 +42,8 @@ class LoginController extends Controller
             'title' => 'Quiz - English Quiz'
         ]);
     }
+
+    public function submit(){
+        return view('submit');
+    }
 }

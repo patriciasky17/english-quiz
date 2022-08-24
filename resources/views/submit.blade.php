@@ -5,13 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/login.css">
-    <title>{{ $title }}</title>
+    <link rel="stylesheet" href="./assets/css/submit.css">
+    <title>Submit-Quiz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      Access English Course
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      
+    </label>
+  </div>
+  
+  <div class="nav-links">
+  <a href="{{route('login.quiz')}}">Quiz</a>
+    <a href="{{route('submit.index')}}">Submit</a>
+  </div>
+</div>
+
+
+
+
+
+
 
     <body class="align">
+
+    
 
         <div class="grid">
             <img src="./assets/img/AEC.png" alt="logo" width="200" height="200">
@@ -19,28 +46,22 @@
             <form action="{{ route('login.register') }}" method="POST" class="form login">
             @csrf
                 <div class="form__field">
-                    <label for="login__username"><svg class="icon">
-                            <use xlink:href="#icon-user"></use>
-                        </svg><span class="hidden">Username</span></label>
-                    <input autocomplete="username" id="login__username" type="text" name="email" class="form__input"
-                        placeholder="Email" required>
+         
+                <input autocomplete="score" id="score" type="text" name="score" class="form__input"
+                        placeholder="Score" required>
                 </div>
 
                 <div class="form__field">
-                    <label for="login__password"><svg class="icon">
-                            <use xlink:href="#icon-lock"></use>
-                        </svg><span class="hidden">Password</span></label>
-                    <input id="login__password" type="password" name="password" class="form__input"
+      
+                    <input id="login__password" type="file" name="password" class="form__input"
                         placeholder="Password" required>
                 </div>
 
                 <div class="form__field">
-                    <input type="submit" value="Sign In">
+                    <input type="submit" value="Submit">
                 </div>
 
-                <div class="form__field">
-                    <input type="submit" value="Register">
-                </div>
+                
 
             </form>
 

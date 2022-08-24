@@ -7,11 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $title }}</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
 </head>
 
 <body>
-    <h1>English Quiz</h1>
+
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      Access English Course
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      
+    </label>
+  </div>
+  
+  <div class="nav-links">
+  <a href="{{route('login.quiz')}}">Quiz</a>
+    <a href="{{route('submit.index')}}">Submit</a>
+  </div>
+</div>
+    
+ 
     <div class="quiz-container">
         <div id="quiz"></div>
     </div>
