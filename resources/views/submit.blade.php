@@ -45,6 +45,13 @@
 
             <form action="{{ route('login.register') }}" method="POST" class="form login">
             @csrf
+
+                 <div class="form__field">
+         
+                <input autocomplete="score" id="nama_lengkap" type="text" name="nama" class="form__input"
+                        placeholder="Nama Lengkap" required>
+                </div>
+
                 <div class="form__field">
          
                 <input autocomplete="score" id="score" type="text" name="score" class="form__input"
