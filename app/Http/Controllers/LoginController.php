@@ -15,23 +15,23 @@ class LoginController extends Controller
         ]);
     }
 
-    public function register(Request $request)
+    public function authenticate(Request $request)
     {
-        $validatedData = $request->validate([
+        $credentials = $request->validate([
             'email' => 'required|email:dns',
             'password' => 'required'
         ]);
 
-        $users = [
-            'email' => $validatedData['email'],
-            'password' => $validatedData['password']
-        ];
+        // dd(Auth::login($credentials));
 
-        // dd($users);
-
-        User::create($users);
+        // if (Auth::login($credentials)) {
+        //     dd('success');
+        //     $request->session()->regenerate();
+        //     return redirect()->intended(route('login.quiz'));
+        // }
 
         return redirect()->intended(route('login.quiz'));
+        // return back()->with('loginError','Login failed!');
     }
 
     public function quiz(){
@@ -39,8 +39,4 @@ class LoginController extends Controller
             'title' => 'Quiz - English Quiz'
         ]);
     }
-
-    // public function submit(){
-    //     return view('submit');
-    // }
 }

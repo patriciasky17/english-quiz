@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/login.css">
-
     <title>{{ $title }}</title>
 </head>
 
@@ -15,19 +14,9 @@
     <body class="align">
 
         <div class="grid">
-            @if (session()->has('success'))
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-light rounded p-4" style="display: flex; justify-content: center; align-items: center; border: 1px solid rgb(89, 180, 47);background-color: rgba(189, 255, 159, 0.729); border-radius: 10px; height: 50px;">
-                    <div class="alert alert-success" role="alert">
-                        <b>{{ session('success') }}</b>
-                    </div>
-                </div>
-            </div>
-            @endif
-
             <img src="./assets/img/AEC.png" alt="logo" width="200" height="200">
 
-            <form action="{{ route('login.authenticate') }}" method="POST" class="form login">
+            <form action="{{ route('register.store') }}" method="POST" class="form login">
             @csrf
                 <div class="form__field">
                     <label for="login__username"><svg class="icon">
@@ -41,17 +30,25 @@
                     <label for="login__password"><svg class="icon">
                             <use xlink:href="#icon-lock"></use>
                         </svg><span class="hidden">Password</span></label>
-                    <input id="login__password" type="password" name="password" class="form__input"
+                    <input id="login__password" type="password" name="password1" class="form__input"
                         placeholder="Password" required>
                 </div>
 
                 <div class="form__field">
-                    <input type="submit" value="Sign In">
+                    <label for="login__password"><svg class="icon">
+                            <use xlink:href="#icon-lock"></use>
+                        </svg><span class="hidden">Password</span></label>
+                    <input id="login__password" type="password" name="password2" class="form__input"
+                        placeholder="Confirm Password" required>
+                </div>
+
+                <div class="form__field">
+                    <input type="submit" value="Register">
                 </div>
 
             </form>
 
-            <p style="text-align: center">Don't have an account? <a href="{{ route("register.index") }}" style="color: orange; font-weight: 600">Register here!</a></p>
+            <p style="text-align: center">Already registered? <a href="{{ route("login.index") }}" style="color: orange; font-weight: 600">Login here!</a></p>
 
         </div>
 
