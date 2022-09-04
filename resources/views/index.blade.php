@@ -36,8 +36,8 @@
     <div class="quiz-container">
         <div id="quiz"></div>
     </div>
-    <button id="previous">Previous Question</button>
-    <button id="next">Next Question</button>
+    <button id="previous" class="previous">Previous </button>
+    <button id="next" class="">Next </button>
     <button id="submit">Submit Quiz</button>
     <div id="results"></div>
 </body>
