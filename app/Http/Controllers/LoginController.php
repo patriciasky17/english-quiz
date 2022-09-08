@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
@@ -30,7 +31,9 @@ class LoginController extends Controller
         //     return redirect()->intended(route('login.quiz'));
         // }
 
-        return redirect()->intended(route('login.quiz'));
+        return Redirect::to("https://www.google.com/");
+
+        // return redirect()->intended(route('login.quiz'));
         // return back()->with('loginError','Login failed!');
     }
 
